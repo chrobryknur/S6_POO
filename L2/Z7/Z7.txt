@@ -1,0 +1,42 @@
+class Student
+{
+    UsosWebPage usosWebPage;
+
+    void show()
+    {
+        usosWebPage.show();
+    }
+}
+
+class UsosWebPage
+{
+    GradeController gradeController;
+    PageLayout pageLayout;
+
+    void show()
+    {
+        pageLayout = gradeController.getStudentGradeInfo();
+    }
+}
+
+class GradeController
+{
+
+    PageLayout getStudentGradeInfo(Student student)
+    {
+        for(auto course : student.getCourses())
+        {
+            auto mark = course.getMark(student);
+        }
+    }
+}
+
+class Course
+{
+    int getMark(Student student)
+    {
+        return self.getValue();
+    }
+}
+
+Diagram przedstawia ogólną ideę działania części systemu, natomiast brakuje na nim wielu szczegółów, przez co jest on niejednoznaczny
